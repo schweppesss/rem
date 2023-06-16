@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container grid">
+        <div id="modal" class="modal grid">
+            <div class="modal__top grid">
+                <button class="modal__cross hover" easy-remove="#modal" easy-class="open">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                        <path d="M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z"/>
+                    </svg>
+                </button>
+                <h2 class="modal__title">Вызов мастера</h2>
+                <p class="modal__descr">
+                    Отправляя заявку онлайн, вы получаете скидку 10% на ремонт
+                </p>
+            </div>
+            <form action="" class="modal__bottom grid">
+                <div class="modal__input-area grid">
+                    <label for="name">Ваше имя:</label>
+                    <input type="text" id="name" name="name" class="modal__input" placeholder="Как вас зовут?">
+                </div>
+                <div class="modal__input-area grid">
+                    <label for="tel">Ваш телефон<span>*</span>:</label>
+                    <input type="tel" id="tel" name="tel" class="modal__input" placeholder="+7 (___) ___-__-__">
+                </div>
+                <button type="submit" class="modal__save hover">Вызвать мастера</button>
+                <p class="modal__form-descr">
+                    Нажимая на кнопку, я даю<br>
+                    <a href="#" target="_blank">согласие на обработку своих персональных данных</a>
+                </p>
+            </form>
+        </div>
+        <div class="modal-bg" easy-remove="#modal" easy-class="open"></div>
+        <header class="header" style="background-image: url(img/header_bg.jpg);">
+            <div class="wrapper-header grid">
+                <div class="header__content flex">
+                    <div class="header__left-area flex">
+                        <a href="#"><img src="img/logo.svg" alt="" class="header__logo hover"></a>
+                        <nav class="header__nav flex">
+                            <button class="header__nav-element flex hover" easy-toggle="#header-dropdown" easy-class="open" easy-rcoe>
+                                Услуги
+                                <svg viewBox="0 0 19 9" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.5 9L1.60649e-06 3.76997e-08L19 1.69873e-06L9.5 9Z"/>
+                                </svg>
+                            </button>
+                            <div id="header-dropdown" class="header__dropdown grid">
+                                <a href="#" class="header__nav-element hover">Ремонт холодильников</a>
+                                <a href="#" class="header__nav-element hover">Ремонт посудомоечных машин</a>
+                                <a href="#" class="header__nav-element hover">Ремонт стиральных машин</a>
+                                <a href="#" class="header__nav-element hover">Ремонт варочных панелей</a>
+                                <a href="#" class="header__nav-element hover">Ремонт духовых шкафов</a>
+                                <a href="#" class="header__nav-element hover">Ремонт кофемашин</a>
+                                <a href="#" class="header__nav-element hover">Ремонт кондиционеров</a>
+                                <a href="#" class="header__nav-element hover">Заправка кондиционеров</a>
+                                <a href="#" class="header__nav-element hover">Ремонт телевизоров</a>
+                            </div>
+                            <a href="#" class="header__nav-element hover">Скидки</a>
+                            <a href="#" class="header__nav-element hover">Гарантия</a>
+                            <a href="#" class="header__nav-element hover">Контакты</a>
+                        </nav>
+                        <button class="header__action" easy-add="#mobile-menu" easy-class="open">
+                            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 2C0 0.895431 0.895431 0 2 0H18C19.1046 0 20 0.895431 20 2C20 3.10457 19.1046 4 18 4H2C0.895431 4 0 3.10457 0 2Z"/>
+                                <path d="M0 10C0 8.89543 0.895431 8 2 8H18C19.1046 8 20 8.89543 20 10C20 11.1046 19.1046 12 18 12H2C0.895431 12 0 11.1046 0 10Z"/>
+                                <path d="M0 18C0 16.8954 0.895431 16 2 16H18C19.1046 16 20 16.8954 20 18C20 19.1046 19.1046 20 18 20H2C0.895431 20 0 19.1046 0 18Z"/>
+                            </svg>
+                        </button>
+                        <div id="mobile-menu" class="mobile-menu">
+                            <div class="mobile-menu__top flex">
+                                <h2 class="mobile-menu__title">Меню</h2>
+                                <button class="mobile-menu__cross" easy-remove="#mobile-menu" easy-class="open">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                        <path d="M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <button class="header__nav-element flex hover" easy-toggle="#mobile-dropdown" easy-class="open" easy-rcoe>
+                                Услуги
+                                <svg viewBox="0 0 19 9" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.5 9L1.60649e-06 3.76997e-08L19 1.69873e-06L9.5 9Z"/>
+                                </svg>
+                            </button>
+                            <div id="mobile-dropdown" class="header__dropdown grid">
+                                <a href="#" class="header__nav-element hover">Ремонт холодильников</a>
+                                <a href="#" class="header__nav-element hover">Ремонт посудомоечных машин</a>
+                                <a href="#" class="header__nav-element hover">Ремонт стиральных машин</a>
+                                <a href="#" class="header__nav-element hover">Ремонт варочных панелей</a>
+                                <a href="#" class="header__nav-element hover">Ремонт духовых шкафов</a>
+                                <a href="#" class="header__nav-element hover">Ремонт кофемашин</a>
+                                <a href="#" class="header__nav-element hover">Ремонт кондиционеров</a>
+                                <a href="#" class="header__nav-element hover">Заправка кондиционеров</a>
+                                <a href="#" class="header__nav-element hover">Ремонт телевизоров</a>
+                            </div>
+                            <a href="#" class="header__nav-element hover">Скидки</a>
+                            <a href="#" class="header__nav-element hover">Гарантия</a>
+                            <a href="#" class="header__nav-element hover">Контакты</a>
+                        </div>
+                        <div class="modal-bg" easy-remove="#mobile-menu" easy-class="open"></div>
+                    </div>
+                    <div class="header__right-area grid">
+                        <div class="header__time">Ежедневно, 8:00-22:00</div>
+                        <a href="tel:+79435323243" class="header__telephone hover">+7 (943) 532-32-43</a>
+                        <button class="header__order-call hover" easy-add="#modal" easy-class="open">Заказать звонок</button>
+                    </div>
+                </div>
+                <div class="header__bottom grid">
+                    <div class="header__breadcrumb flex">
+                        <a href="#" class="header__breadcrumb-element">Главная</a>
+                        <a href="#" class="header__breadcrumb-element">Контакты</a>
+                    </div>
+                    <h1 class="header__title">Контакты</h1>
+                    <p class="header__descr">
+                        Мы занимаемся ремонтом всей крупной бытовой техники от самых различных производителей. Позвонив к нам сразу после поломки – вы делаете важнейший шаг в сторону эффективного и недорого ремонта.
+                    </p>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="section section--contacts-page">
+                <div class="wrapper grid">
+                    <div class="contacts grid">
+                        <div class="contacts__left-area">
+                            <iframe title="Адрес сервисного центра REM24.BY" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98118.03613188255!2d27.50688280655632!3d53.90087784079285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcf0ed6bc7e79%3A0x4a6ff952b3d812df!2z0YPQuy4g0JrRg9C30YzQvNGLINCn0L7RgNC90L7Qs9C-IDXQsCwg0JzQuNC90YHQug!5e0!3m2!1sru!2sby!4v1653218182397!5m2!1sru!2sby" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="contacts__right-area grid">
+                            <h1 class="contacts__title">Контакты</h1>
+                            <p class="contacts__descr">
+                                Выполним ремонт в удобное для вас время. Мастера нашей компании выезжают по всей территории Минска + 30 км от МКАД
+                            </p>
+                            <div class="contacts__contact flex">
+                                <svg viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17 2H8C7.60218 2 7.22064 2.15804 6.93934 2.43934C6.65804 2.72064 6.5 3.10218 6.5 3.5V21.5C6.5 21.8978 6.65804 22.2794 6.93934 22.5607C7.22064 22.842 7.60218 23 8 23H17C17.3978 23 17.7794 22.842 18.0607 22.5607C18.342 22.2794 18.5 21.8978 18.5 21.5V3.5C18.5 3.10218 18.342 2.72064 18.0607 2.43934C17.7794 2.15804 17.3978 2 17 2ZM8 0.5C7.20435 0.5 6.44129 0.816071 5.87868 1.37868C5.31607 1.94129 5 2.70435 5 3.5V21.5C5 22.2956 5.31607 23.0587 5.87868 23.6213C6.44129 24.1839 7.20435 24.5 8 24.5H17C17.7956 24.5 18.5587 24.1839 19.1213 23.6213C19.6839 23.0587 20 22.2956 20 21.5V3.5C20 2.70435 19.6839 1.94129 19.1213 1.37868C18.5587 0.816071 17.7956 0.5 17 0.5L8 0.5Z"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 21.5C12.8978 21.5 13.2794 21.342 13.5607 21.0607C13.842 20.7794 14 20.3978 14 20C14 19.6022 13.842 19.2206 13.5607 18.9393C13.2794 18.658 12.8978 18.5 12.5 18.5C12.1022 18.5 11.7206 18.658 11.4393 18.9393C11.158 19.2206 11 19.6022 11 20C11 20.3978 11.158 20.7794 11.4393 21.0607C11.7206 21.342 12.1022 21.5 12.5 21.5Z"></path>
+                                </svg>
+                                <a href="tel:+79435323243" target="_blank" class="contacts__value hover">+7 (943) 532-32-43 Ежедневно, 8:00-22:00</a>
+                            </div>
+                            <div class="contacts__contact flex">
+                                <svg viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5002 5H3.50024C3.10242 5 2.72089 5.15804 2.43958 5.43934C2.15828 5.72064 2.00024 6.10218 2.00024 6.5V6.82525L12.5002 13.1255L23.0002 6.82518V6.5C23.0002 6.10218 22.8422 5.72064 22.5609 5.43934C22.2796 5.15804 21.8981 5 21.5002 5ZM0.500244 7.27068C0.499919 7.25793 0.499919 7.24517 0.500244 7.23241V6.5C0.500244 5.70435 0.816315 4.94129 1.37892 4.37868C1.94153 3.81607 2.70459 3.5 3.50024 3.5H21.5002C22.2959 3.5 23.059 3.81607 23.6216 4.37868C24.1842 4.94129 24.5002 5.70435 24.5002 6.5V7.2394V7.2606V18.5C24.5002 19.2956 24.1842 20.0587 23.6216 20.6213C23.059 21.1839 22.2959 21.5 21.5002 21.5H3.50024C2.70459 21.5 1.94153 21.1839 1.37892 20.6213C0.816315 20.0587 0.500244 19.2956 0.500244 18.5V7.27068ZM23.0002 17.194V8.57474L15.7162 12.945L23.0002 17.194ZM22.9461 18.8995L14.3722 13.898L14.2482 13.8257L12.5002 14.8745L10.7519 13.8258L10.6282 13.898L2.05439 18.8994C2.12287 19.1473 2.25456 19.3756 2.43958 19.5607C2.72089 19.842 3.10242 20 3.50024 20H21.5002C21.8981 20 22.2796 19.842 22.5609 19.5607C22.7459 19.3757 22.8776 19.1473 22.9461 18.8995ZM2.00024 17.194V8.57616L9.28386 12.9452L2.00024 17.194Z"></path>
+                                </svg>
+                                <a href="mailto:rem24by@gmail.com" target="_blank" class="contacts__value hover">rem24by@gmail.com</a>
+                            </div>
+                            <div class="contacts__contact flex">
+                                <svg viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2255 0.919479C24.3114 0.989882 24.3805 1.07848 24.428 1.17887C24.4755 1.27925 24.5001 1.38893 24.5 1.49998V21C24.4999 21.1733 24.4398 21.3412 24.3298 21.4752C24.2199 21.6092 24.067 21.701 23.897 21.735L16.397 23.235C16.3 23.2543 16.2 23.2543 16.103 23.235L8.75 21.765L1.397 23.235C1.28823 23.2567 1.176 23.2541 1.06838 23.2272C0.960764 23.2003 0.860444 23.15 0.774649 23.0797C0.688854 23.0093 0.61972 22.9209 0.572228 22.8207C0.524735 22.7204 0.500067 22.6109 0.5 22.5V2.99998C0.500105 2.82666 0.560234 2.65873 0.670165 2.52473C0.780096 2.39074 0.933042 2.29895 1.103 2.26498L8.603 0.764979C8.70004 0.745583 8.79996 0.745583 8.897 0.764979L16.25 2.23498L23.603 0.764979C23.7117 0.743103 23.824 0.745613 23.9316 0.772329C24.0392 0.799045 24.1396 0.849301 24.2255 0.919479ZM15.5 3.61498L9.5 2.41498V20.385L15.5 21.585V3.61498ZM17 21.585L23 20.385V2.41498L17 3.61498V21.585ZM8 20.385V2.41498L2 3.61498V21.585L8 20.385Z"></path>
+                                </svg>
+                                <p class="contacts__value">г. Минск, ул. Кузьмы Чорного 5А</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="wrapper wrapper--footer grid">
+                <div class="footer__info grid">
+                    <a href="#"><img src="" alt="" class="footer__logo"></a>
+                    <p class="footer__descr">
+                        © 2022 Общество с ограниченной ответственностью «Грата Альянс» УНП 192305924, г. Минск, ул. Кузьмы Чорного 5А, помещение 14
+                        <br><br>Содержимое сайта не является публичной офертой
+                    </p>
+                </div>
+                <nav class="footer__nav grid">
+                    <h3 class="footer__nav-title">Навигация:</h3>
+                    <div class="footer__nav-left-area grid">
+                        <a href="#" class="footer__nav-element hover">Ремонт холодильников</a>
+                        <a href="#" class="footer__nav-element hover">Ремонт посудомоечных машин</a>
+                        <a href="#" class="footer__nav-element hover">Ремонт стиральных машин</a>
+                        <a href="#" class="footer__nav-element hover">Ремонт варочных панелей</a>
+                        <a href="#" class="footer__nav-element hover">Ремонт духовых шкафов</a>
+                        <a href="#" class="footer__nav-element hover">Ремонт кофемашин</a>
+                        <a href="#" class="footer__nav-element hover">Ремонт кондиционеров</a>
+                        <a href="#" class="footer__nav-element hover">Заправка кондиционеров</a>
+                        <a href="#" class="footer__nav-element hover">Ремонт телевизоров</a>
+                    </div>
+                    <div class="footer__nav-right-area grid">
+                        <a href="#" class="footer__nav-element hover">Акции и скидки</a>
+                        <a href="#" class="footer__nav-element hover">Гарантийный случай</a>
+                        <a href="#" class="footer__nav-element hover">Согласие на обработку персональных данных</a>
+                        <a href="#" class="footer__nav-element hover">Контакты</a>
+                        <a href="#" class="footer__nav-element hover">Полезно почитать</a>
+                        <a href="#" class="footer__nav-element hover">Вакансии</a>
+                    </div>
+                </nav>
+            </div>
+        </footer>
+    </div>
+    <script src="easy-toggler.iife.min.js"></script>
+</body>
+</html>
